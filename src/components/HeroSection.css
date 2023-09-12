@@ -1,0 +1,96 @@
+.img-hero {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  filter: brightness(0.5)
+}
+
+.hero-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-container::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.6); /* Apply the opacity to the overlay color */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.hero-container h1 {
+  color: #fff;
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-container p {
+  color: #fff; /* White text color for readability */
+  font-size: 24px;
+  font-family: 'Arial', sans-serif;
+  margin-top: 12px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); /* Add text shadow for contrast */
+}
+.hero-btns {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.hero-btns .btn:hover{
+  background-color: #0056b3; /* Change button background color on hover */
+  /* You can adjust the hover color to your preference */
+}
+
+.hero-btns .btn {
+  background-color: #007BFF; /* Change button background color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  padding: 14px 28px; /* Padding for better button size */
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fa-play-circle {
+  margin-left: 4px;
+}
+
+@media screen and (max-width: 960px) {
+  .hero-container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-container > h1 {
+    font-size: 50px;
+    margin-top: -100px;
+  }
+
+  .hero-container > p {
+    font-size: 30px;
+  }
+
+  .btn-mobile {
+    display: block;
+    text-decoration: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
